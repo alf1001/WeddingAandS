@@ -55,13 +55,13 @@ body{
 .hero a:hover{
     background-color: var(--bg);
 }
+
 .mynavbar{
     background-color: rgba(255, 255, 255, 0.3) !important;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
 }
-.mynavbar .offcanvas-title{
+.mynavbar .offcanvas{
     height: 100vh;
-
 }
 
 .mynavbar .navbar-brand,.mynavbar .offcanvas-title{
@@ -80,7 +80,7 @@ body{
     padding-top: 10.5rem;
     padding-bottom: 15rem;
 }
-.home h2,.info h2{
+.home h2,.info h2,.story h2{
     color: var(--blue);
     font-size: 3.5rem;
 }
@@ -152,6 +152,124 @@ body{
     font-size: 0.9rem;
     font-weight: 200;
 }
+.story{
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+
+}
+.story span{
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+.story h2{
+    padding-top: 1rem;
+    font-family: 'borel',cursive;
+}
+.story p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.timeline{
+    position: relative;
+    list-style: none;
+    padding: 1.4rem 0;
+    margin-top: 1rem;
+}
+.timeline::before{
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1px;
+    background-color: #ccc;
+    left: 50%;
+}
+.timeline li{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.timeline li::before,.timeline li::after{
+    content: '';
+    display: table;
+}
+.timeline li::after{
+    clear: both;
+}
+.timeline-image{
+    background-image: url(img/wallhaven-w839yx.jpg);
+}
+.timeline li .timeline-image{
+    width: 160px;
+    height: 160px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.timeline li .timeline-panel{
+    width: 40%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    position: relative;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: #fff;
+}
+.timeline li .timeline-panel::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    top: 80px;
+    right: -15px;
+    /* width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    right: -15px;
+    top: 70px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    z-index: -1; */
+}
+.timeline li .timeline-panel::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    border-bottom: 15px solid transparent;
+    top: 81px;
+    right: -13px;
+}
+
 
 /* Media Query */
 /* extra large */
@@ -187,6 +305,13 @@ body{
     .simply-countdown >.simply-section{
         padding: 60px;
         margin: 5px;
+    }
+    .sticky-top{
+        overflow: hidden;
+    }
+    .mynavbar .nav-link{
+        font-size: 1.7rem;
+        text-align: center;
     }
 
 }
