@@ -36,7 +36,7 @@
         </main>
     </section>
 
-    <nav class="navbar navbar-expand-sm bg-transparent sticky-top mynavbar">
+    <nav class="navbar navbar-expand-lg bg-transparent sticky-top mynavbar">
         <div class="container">
           <a class="navbar-brand fw-semibold" href="#">Katal</a>
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
                     <a class="nav-link" href="#gallery">Gallery</a>
                     <a class="nav-link" href="#RSVP">RSVP</a>
                     <a class="nav-link" href="#saweria">Saweria</a>
-                  </div>            
+                </div>            
             </div>
           </div>
         </div>
@@ -166,7 +166,37 @@
         </div>
       </section>
 
+      <section id="story" class="story">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-10 text-center">
+              <span>Bagaimana Cinta Kami Bersemi</span>
+              <h2>Cerita Kami</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti commodi quaerat dolore? Error rem aspernatur incidunt iusto itaque accusamus aliquam!</p>
+            </div>
+            <div class="row">
+              <div class="col">
+                <ul class="timeline">
+                  <li>
+                    <div class="timeline-image"></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                        <h3>Pertama Bertemu</h3>
+                        <span>16 Agustus 2023</span>
+                      </div>
+                      <div class="timeline-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt dignissimos eius laudantium, tenetur nesciunt numquam quis? Ea, minus tenetur? Eius.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+    
     <!-- JS bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script>
@@ -184,13 +214,17 @@
                     seconds: { singular: 'second', plural: 'seconds' }
                 },
         });
+    // MAIN JS
+        const hamburger = document.querySelector('.navbar-toggler');
+        const stickyTop = document.querySelector('.sticky-top');
+        hamburger.addEventListener('click',function(){
+          stickyTop.style.overflow = 'visible';
+        });
+        const offCanvas = document.querySelector('.offcanvas');
+        offCanvas.addEventListener('hidden.bs.offcanvas',function(){
+          stickyTop.style.overflow = 'hidden';
+        });
 
-        // Also, you can init with already existing Javascript Object.
-        let myElement = document.querySelector('.my-countdown');
-        simplyCountdown(myElement,{ /* options */ });
-
-        let multipleElements = document.querySelectorAll('.my-countdown');
-        simplyCountdown(multipleElements, { /* options */ });
     </script>
 </body>
 </html>
